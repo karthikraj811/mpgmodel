@@ -1,0 +1,89 @@
+{%load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
+</head>
+<body>
+    <header>
+        <div class='header-1'>
+        <h3>Mileage Prediction Machine Learning Model:</h3>
+        </div>
+    </header>
+    <form method="POST" action="result">
+        {%csrf_token%}
+    <div class='form'>
+        <div class='cyl'>
+            <div class='cyl-t'>
+                <label for='cylinder'>No.of.Cylinders :</label>
+            
+                <input class='cyl-i' type='text' name='cylinder' id='cylinder' placeholder="eg:-6,7,8...">
+            </div>
+        <div><br>
+
+        <div class='disp'>
+            <div class='disp-t'>
+                <label for='disp'>Displacement :</label>
+        
+                 <input class='disp-i' type='text' name='disp' id='disp' placeholder="eg:-119,122,130...">
+            </div>
+        </div><br>
+
+        <div class='hp'>
+            <div class='hp-t'>
+                <label for='hp'>Horse Power :</label>
+            
+                <input class='hp-i' type='text' name='hp' id='hp' placeholder="eg:-82,89,66..." >
+            </div>
+        </div><br>
+
+        <div class='weight'>
+            <div class='wt-t'>
+                <label for='wt'>Weight of the Car :</label>
+            
+                <input class='wt-i' type='text' name='wt' id='wt' placeholder="eg:-2590,2720,2550..">
+            </div>
+        </div><br>
+
+        <div class='acc'>
+            <div class='acc-t'>
+                <label for='acc'>Accelaration :</label>
+            
+                <input class='acc-i' type='text' name='acc' id='acc' placeholder="eg:-11.2,15.6,24.5..">
+            </div>
+        </div><br>
+
+        <div class='yr'>
+            <div class='yr-t'>
+                <label for='yr'>Year of the model :</label>
+           
+                <input class='yr-i' type='text' name='yr' id='yr' placeholder="eg:-70,82,90..." >
+            </div>
+        </div><br>
+
+        <div class='orgin'>
+            <div class='orgin-t'>
+                <label for='orgin'>Origin :</label>
+            
+                <input  class='orgin-i' type='text' name='orgin' id='orgin' placeholder="eg:-1,2,3..." >
+            </div>
+            
+        </div><br><br>
+        <div class='pred'>
+            <button class='btn' type='submit'>PREDICT</button>
+        </div>
+    </div><br>
+    </form>
+
+    {% if result %}
+    <div>
+        <h3>Result:{{result}} Mileage Per Gallon</h3>
+    </div>
+    {%endif%}
+
+
+
+</body>
+</html>
