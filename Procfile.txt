@@ -1,1 +1,1 @@
-web: gunicorn mgpmodel.wsgi 
+web: gunicorn mgpmodel.wsgi --log-file -
