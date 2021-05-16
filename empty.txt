@@ -1,8 +1,8 @@
 This is not empty now
 Not a empty file anymore
-<<<<<<< HEAD
+
 Changes made in GIT CLI
-=======
+
 
 Changes made in GUI
->>>>>>> 28e5210731f1f0ba3ed28cbe6c6c27f148cb282a
+
