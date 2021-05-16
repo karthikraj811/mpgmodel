@@ -1,2 +1,4 @@
 This is not empty now
 Not a empty file anymore
+
+Changes made in GUI
